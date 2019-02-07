@@ -1,0 +1,93 @@
+@import './base/settings';
+@import './base/base';
+
+body{
+    background-color: $dark-blue;
+    color: whitesmoke;
+}
+
+.welcome-page{
+    position: fixed;
+    display: grid;
+    grid-template-rows: 120px 20fr;
+    height: 100%;
+    width: 100%;
+.header{
+    grid-row: 1/2;
+    background-color: rgb(113, 10, 161);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        align-self: center;
+    }
+}
+    .content-body{
+        grid-row: 2/3;
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+        .level-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            button{
+                font-size: 1.2em;
+                width: 140px;
+                height: 40px;
+                border: none;
+                border-radius: 15px;
+                background-color: rgb(47, 204, 107);
+
+            }
+            button:focus{
+                outline: none;
+            }
+            .btn-container{
+                height: 270px;
+                width: 240px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                button{
+                    font-size: 1.2em;
+                    width: 220px;
+                    height: 60px;
+                    border: none;
+                    border-radius: 15px;
+                    &:nth-child(1){
+                        background-color: rgb(14, 187, 106);
+                    }
+                    &:nth-child(2){
+                        background-color: rgb(140, 10, 172);
+                    }
+                    &:nth-child(3){
+                        background-color: #d00247e0;
+                    }
+                }
+                button:focus{
+                    outline: none;
+                }
+            }
+            .question-box{
+                background-color: $light-blue;
+                display: flex;
+                flex-direction: column;
+                width: 550px;
+                height: 350px;
+                justify-content: space-around;
+                .mcq-container{
+                    align-self: center;
+                    display: flex;
+                    flex-direction: column;
+                    .mcq{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
