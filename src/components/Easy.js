@@ -64,10 +64,11 @@ class Easy extends React.Component{
         autoHideTimeout={300}
         autoHideDuration={300}
       >
+      <form className="mcq-container">
           <Question options = {this.options[0]} name = "form1"/>
             
           <Question options = {this.options[1]} name = "form2"/>
-         
+        </form>
           </Scrollbars>
           </div>
           <button onClick={() => this.formsubmit()}>Submit</button>

@@ -18,9 +18,8 @@ class Question extends React.Component{
 
     render(){
         return(
-            <div>
-                <p>{this.props.options[0]}</p>
-                <form className={`mcq-container ${this.props.name}`} onSubmit={this.handleSubmit}>
+            <div className={this.props.name}>
+            <p>{this.props.options[0]}</p>
                 <div className="mcq">
                 <input type="radio" name="gender" value={this.props.options[1]} checked = {this.state.answer === this.props.options[1]} onChange={this.handleoptionselect} /> <span>{this.props.options[1]}</span>
                 </div>
@@ -33,7 +32,6 @@ class Question extends React.Component{
                 <div className="mcq">
                 <input type="radio" name="gender" value={this.props.options[4]} checked = {this.state.answer === this.props.options[4]} onChange={this.handleoptionselect} /> <span>{this.props.options[4]}</span>
                 </div>
-            </form>
             </div>
         )
     }
