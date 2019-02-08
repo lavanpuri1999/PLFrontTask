@@ -7,7 +7,7 @@ import Configurestore from './Configurestore';
 import Trial from './components/Trials';
 
 const store = Configurestore();
-console.log(store);
+console.log('hi');
 
 ReactDOM.render(<Provider store={store}><Trial /></Provider>, document.getElementById('app'));
   
