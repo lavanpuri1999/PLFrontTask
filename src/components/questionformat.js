@@ -19,19 +19,25 @@ class Question extends React.Component{
     render(){
         return(
             <form className={`mcq-container ${this.props.name}`} onSubmit={this.handleSubmit}>
-            <p>{this.props.options[0]}</p>
-                <div className="mcq">
-                <input type="radio" name={this.props.name} value={this.props.options[1]} checked = {this.state.answer === this.props.options[1]} onChange={this.handleoptionselect} /> <span>{this.props.options[1]}</span>
-                </div>
-                <div className="mcq">
-                <input type="radio" name={this.props.name} value={this.props.options[2]} checked = {this.state.answer === this.props.options[2]} onChange={this.handleoptionselect}/><span>{this.props.options[2]}</span>
-                </div>
-                <div className="mcq">
-                <input type="radio" name={this.props.name} value={this.props.options[3]} checked = {this.state.answer ===this.props.options[3]} onChange={this.handleoptionselect}/> <span>{this.props.options[3]}</span>
-                </div>
-                <div className="mcq">
-                <input type="radio" name={this.props.name} value={this.props.options[4]} checked = {this.state.answer === this.props.options[4]} onChange={this.handleoptionselect} /> <span>{this.props.options[4]}</span>
-                </div>
+                <p>{this.props.options[0]}</p>
+                <ul>
+                <li>
+                <input type="radio" name={this.props.name} value={this.props.options[1]} id={this.props.options[1]} checked = {this.state.answer === this.props.options[1]} onChange={this.handleoptionselect} /> <label htmlFor={this.props.options[1]}>{this.props.options[1]}</label>
+                <div className="check"><div className="inside"></div></div>
+                </li>
+                <li>
+                <input type="radio" name={this.props.name} value={this.props.options[2]} id={this.props.options[2]} checked = {this.state.answer === this.props.options[2]} onChange={this.handleoptionselect}/><label htmlFor={this.props.options[2]}>{this.props.options[2]}</label>
+                <div className="check"><div className="inside"></div></div>
+                </li>
+                <li>
+                <input type="radio" name={this.props.name} value={this.props.options[3]} id={this.props.options[3]} checked = {this.state.answer ===this.props.options[3]} onChange={this.handleoptionselect}/> <label htmlFor={this.props.options[3]}>{this.props.options[3]}</label>
+                <div className="check"><div className="inside"></div></div>
+                </li>
+                <li>
+                <input type="radio" name={this.props.name} value={this.props.options[4]}  id={this.props.options[4]} checked = {this.state.answer === this.props.options[4]} onChange={this.handleoptionselect} /> <label htmlFor={this.props.options[4]}>{this.props.options[4]}</label>
+                <div className="check"><div className="inside"></div></div>
+                </li>
+                </ul>
             </form>
         )
     }
