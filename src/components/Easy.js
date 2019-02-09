@@ -208,7 +208,9 @@ class Easy extends React.Component{
           <Question options = {this.state.level==="easy" && this.optionseasy[4] || this.state.level==="medium" && this.optionsmedium[4] || this.state.level==="hard" && this.optionshard[4]} name = "form"/>
           </Scrollbars>
           </div>
+          <div className=".btn-container">
           <button type = "submit" className="final" onClick={() => this.handleclick()}>Submit</button>
+          </div>
           </div>)
           }
           else{
